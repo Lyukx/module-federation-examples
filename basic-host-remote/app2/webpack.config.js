@@ -3,7 +3,10 @@ const { ModuleFederationPlugin } = require("webpack").container;
 const path = require("path");
 
 module.exports = {
-  entry: "./src/index",
+  entry: {
+    main: "./src/index",
+    app2: "./src/setup-public-path",
+  },
   mode: "development",
   devServer: {
     contentBase: path.join(__dirname, "dist"),
